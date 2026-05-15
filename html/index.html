@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+<div class="card">
+
+  <h1>KEYBLITZ</h1>
+  <p class="subtitle">Typing Speed Test</p>
+
+  <!-- ── GAME SCREEN ── -->
+  <div id="gameScreen" style="width:100%;display:flex;flex-direction:column;align-items:center;gap:24px;">
+
+    <div class="timer-bar-wrap">
+      <div class="timer-bar" id="timerBar"></div>
+    </div>
+
+    <div class="round-info">Round <span id="roundNum">1</span> of 10</div>
+
+    <div class="char-box">
+      <div class="char-label">Type this</div>
+      <div class="char-letter" id="charLetter">?</div>
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+    <div class="input-wrap">
+      <div class="input-label">Press the key above</div>
+      <input id="charInput" type="text" maxlength="1"
+             autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false"
+             placeholder="" />
+      <div class="feedback" id="feedback"></div>
+    </div>
+
+  </div>
+
+  <!-- ── RESULT SCREEN ── -->
+  <div class="result" id="resultScreen">
+    <div class="result-title" id="resultTitle">RESULTS</div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num green"  id="resCorrect">0</div>
+        <div class="stat-name">Correct</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num red"    id="resWrong">0</div>
+        <div class="stat-name">Wrong</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num yellow" id="resTime">0s</div>
+        <div class="stat-name">Time</div>
+      </div>
+    </div>
+
+    <div class="acc-wrap">
+      <div class="acc-label">
+        <span>Accuracy</span>
+        <span id="accLabel">0%</span>
+      </div>
+      <div class="acc-track">
+        <div class="acc-fill" id="accFill"></div>
+      </div>
+    </div>
+
+    <button class="btn" id="btnRestart">PLAY AGAIN</button>
+  </div>
+
+</div>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
